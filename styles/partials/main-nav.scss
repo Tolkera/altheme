@@ -1,0 +1,99 @@
+.al-main-header {
+  background: rgba(0,0,0,0.8);
+
+  .home & {
+    background: rgba(255,255,255,.2);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+}
+
+.al-brand-link {
+  float: left;
+  width: 50px;
+  font-family: $font--brand;
+  font-size: 40px;
+  padding: 5px 0 0;
+  line-height: 1;
+  margin-right: 50px;
+  color: #fff;
+  transition: color $transition--slow;
+
+  &:hover {
+    color: $color-brand;
+  }
+}
+
+.menu-main-nav-container {
+  margin-right: 200px;
+  margin-left: 50px;
+}
+
+.al-main-nav {
+  padding: 0;
+  margin: 0;
+
+  height: 50px;
+  li {
+    display: inline-block;
+    height: 100%;
+  }
+
+  a {
+    height:100%;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    padding: 15px 10px 0;
+    text-decoration: none;
+    transition: all $transition--quick;
+
+    &:hover {
+      color: darken(#fff, 30%)
+    }
+  }
+}
+
+.al-social {
+  float: right;
+  margin: 10px 0;
+}
+
+.al-social-item {
+  display: inline-block;
+  margin-left: 5px;
+
+  a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding-top: 5px;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+
+    &:hover {
+
+      &.fa-facebook {
+        background: #3b5998;
+        border-color: #3b5998;
+      }
+
+      &.fa-linkedin {
+        background: #287bbc;
+        border-color: #287bbc;
+      }
+
+      &.fa-envelope {
+        background: $color-brand;
+        border-color: $color-brand;
+      }
+    }
+  }
+}

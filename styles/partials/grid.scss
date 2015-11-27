@@ -1,0 +1,54 @@
+.al-grid {
+  margin-left: -20px;
+}
+
+.al-grid__item {
+  display: inline-block;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  margin-right: -4px;
+  vertical-align: top;
+}
+
+.al-grid__item--third {
+  width: 33.33%;
+}
+
+.al-grid__item--half {
+  width: 50%;
+}
+
+.al-card {
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+  transition: all $transition--quick;
+  position: relative;
+  right: 0;
+  bottom: 0;
+
+  &:hover {
+  box-shadow: 7px 7px 7px rgba(0,0,0,.3);
+    right: 3px;
+    bottom: 3px;
+  }
+}
+
+.al-location {
+  .fa {
+    margin-right: 5px;
+  }
+
+  color: rgba(0,0,0,.5);
+  font-weight: bold;
+}
+
+.al-card__header {
+  margin-bottom: 10px;
+
+  .al-media__info {
+    margin-top: 3px;
+  }
+}

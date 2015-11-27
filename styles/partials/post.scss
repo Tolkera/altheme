@@ -1,0 +1,14 @@
+.al-post__thumbnail {
+  height: 170px;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 10px;
+  border: 1px dashed rgba(0,0,0,0.2);
+  img {
+   width: 100%;
+  }
+}
+
+.al-post__description {
+  margin-top: 10px;
+}

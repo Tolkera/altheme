@@ -1,0 +1,60 @@
+.al-btn {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+  transition: all $transition--quick;
+  display: inline-block;
+}
+
+a.al-btn {
+  &:hover {
+    color: #fff;
+  }
+}
+
+.al-btn--primary {
+  padding: 10px 30px;
+  font-size: 20px;
+}
+
+.al-btn--regular, a.al-btn--regular {
+  border: 1px solid #000;
+  color: #000;
+
+  &:hover {
+    color: $color-brand;
+    border-color: $color-brand;
+  }
+}
+
+
+.al-btn--secondary {
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.al-btn--attention {
+  background: $color--attention;
+
+  &:hover {
+    background: darken($color--attention, 5%);
+  }
+
+  &:active {
+      background: darken($color--attention, 10%);
+  }
+}
+
+.al-btn--brand {
+  background: $color-brand;
+
+  &:hover {
+    background: darken($color-brand, 5%);
+  }
+
+  &:active {
+    background: darken($color-brand, 10%);
+  }
+}
