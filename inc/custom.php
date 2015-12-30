@@ -85,25 +85,25 @@ function get_attachment_id_from_src ( $image_src ) {
     return $id;
 }
 
-if ( ! function_exists( 'tolkera_comment' ) ) :
+if ( ! function_exists( 'alla_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
- * simply create your own tolkera_comment(), and that function will be used instead.
+ * simply create your own alla_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since tolkera 1.0
+ * @since alla 1.0
  */
-function tolkera_comment( $comment, $args, $depth ) {
+function alla_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'tolkera' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'tolkera' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'alla' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'alla' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -125,21 +125,21 @@ function tolkera_comment( $comment, $args, $depth ) {
 					<div class="comment-author vcard">
 					<?php
 						/* translators: 1: comment author, 2: date */
-						printf( __( '%1$s %2$s', 'tolkera' ),
+						printf( __( '%1$s %2$s', 'alla' ),
 							sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
-							sprintf( '<a class="comment-permalink" title="' . __( 'Permalink to this comment', 'tolkera' ) . '" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
+							sprintf( '<a class="comment-permalink" title="' . __( 'Permalink to this comment', 'alla' ) . '" href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date */
-								sprintf( __( '%1$s', 'tolkera' ), get_comment_date() )
+								sprintf( __( '%1$s', 'alla' ), get_comment_date() )
 							)
 						);
 					?>
 					<?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'tolkera' ); ?></em>
+                    <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'alla' ); ?></em>
 					<?php endif; ?>
-                    <span class="reply"><?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'tolkera' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></span>
-					<?php edit_comment_link( __( 'Edit this comment', 'tolkera' ), '<span class="edit-link">', '</span>' ); ?>
+                    <span class="reply"><?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'alla' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></span>
+					<?php edit_comment_link( __( 'Edit this comment', 'alla' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .comment-author .vcard -->
 				</footer>
 				<div class="comment-text">
@@ -152,4 +152,4 @@ function tolkera_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 }
-endif; // ends check for tolkera_comment()
+endif; // ends check for alla_comment()

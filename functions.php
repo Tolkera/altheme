@@ -25,7 +25,7 @@ function theme_setup() {
 	/* Make theme available for translation.
 	 * Translations can be added to the /languages/ directory.
 	 */
-	load_theme_textdomain( 'tolkera', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'alla', get_template_directory() . '/languages' );
 	
 	// Load up our additional custom functions
 	include_once( get_template_directory().'/inc/custom.php' );
@@ -56,8 +56,8 @@ function theme_setup() {
 
 	// This theme uses wp_nav_menus() in two locations.
 	register_nav_menus(array(
-		'primary' => __( 'Primary Menu', 'tolkera' ),
-        'secondary' => __( 'Secondary menu', 'tolkera' )
+		'primary' => __( 'Primary Menu', 'alla' ),
+        'secondary' => __( 'Secondary menu', 'alla' )
 	));
 
     //remove paragraph tags in the excerpt
@@ -74,15 +74,15 @@ function theme_setup() {
 		add_theme_support( 'automatic-feed-links' );
 	
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 200, 200 ); // default Post Thumbnail dimensions (cropped)
+		set_post_thumbnail_size( 500, 200 ); // default Post Thumbnail dimensions (cropped)
 
 		// additional image sizes
-		add_image_size( 'news-carousel-homepage', 255, 170, true );
-		add_image_size( 'photo-carousel-homepage', 279, 226, true );
-		add_image_size( 'testimonial-homepage', 62, 62, true );
-		add_image_size( 'yandex-maps-size', 150, 100, true );
+		add_image_size( 'news-blog-thumbnail', 540, 250, true );
+		add_image_size( 'news-preview-thumbnail', 600, 250, true );
+
 	}
 }
+
 /**
  * Tell WordPress to run theme_setup() when the 'after_setup_theme' hook is run.
  */
@@ -91,15 +91,15 @@ add_action( 'after_setup_theme', 'theme_setup' );
 /**
  * Register our sidebars and widgetized areas. Also register theme widgets
  *
- * @since tolkera 1.0
+ * @since alla 1.0
  */
 function theme_widgets_init() {
 
     if ( function_exists( 'register_sidebar' ) ) {
         register_sidebar(array(
-            'name' => __( 'Home page sidebar', 'tolkera' ),
+            'name' => __( 'Home page sidebar', 'alla' ),
             'id'   => 'index-sidebar-widgets',
-            'description'   => __( 'These are widgets for the homepage sidebar.', 'tolkera' ),
+            'description'   => __( 'These are widgets for the homepage sidebar.', 'alla' ),
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget'  => '</aside>'
         ));
@@ -114,3 +114,13 @@ function remove_head_links() {
     remove_action( 'wp_head', 'wp_generator' );
 }
 add_action( 'init', 'remove_head_links' );
+
+function register_my_menus() {
+	register_nav_menus(
+		array(
+			'footer-nav-1' => __( 'Footer menu 1' ),
+			'footer-nav-2' => __( 'Footer menu 2' ),
+		)
+	);
+}
+add_action( 'init', 'register_my_menus' );

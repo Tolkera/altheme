@@ -19,29 +19,37 @@
 </head>
 <body <?php body_class( $class ); ?>>
 
+<?php
+$linkedin_url = get_theme_option('linkedin-url');
+$facebook_url = get_theme_option('facebook-url');
+$flickr_url = get_theme_option('flickr-url');
+$email = get_theme_option('email');
+
+?>
+
     <div class="al-site-wrap">
         <header class="al-main-header">
                 <nav class="al-container cf">
-                    <a href="" class="al-brand-link">A</a>
+                    <button class="al-mobile-nav-trigger js-nav-trigger"><span class="fa fa-bars"></span></button>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="al-brand-link">A</a>
                     <ul class="al-social">
-                        <li class="al-social-item"><a href="" class="fa fa-facebook"></a></li>
-                        <li class="al-social-item"><a href="" class="fa fa-linkedin"></a></li>
-                        <li class="al-social-item"><a href="" class="fa fa-envelope"></a></li>
+                        <li class="al-social-item"><a href="<?php print $linkedin_url ?>" class="fa fa-linkedin"></a></li>
+                        <li class="al-social-item"><a href="<?php print $facebook_url ?>" class="fa fa-facebook"></a></li>
+                        <li class="al-social-item"><a href="<?php print $flickr_url ?>" class="fa fa-flickr"></a></li>
+                        <li class="al-social-item"><a href="mailto:<?php print $email ?>" class="fa fa-envelope"></a></li>
 
                     </ul>
 
                     <?php
                     $defaults = array(
                         'container'       => 'div',
-                        'menu_class'      => 'al-main-nav justify',
+                        'menu_class'      => 'al-main-nav justify js-main-nav',
                         'theme_location'    => 'primary'
                     );
 
                     wp_nav_menu( $defaults );
 
                     ?>
-
-
                 </nav>
 
 

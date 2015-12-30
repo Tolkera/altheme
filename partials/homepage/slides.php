@@ -42,5 +42,8 @@ if( $the_query->have_posts() ) : ?>
                 </div>
             <?php endwhile; ?>
         </div>
+        <ol class="al-promo__pagination">
+
+        </ol>
     </div>
 <?php endif; wp_reset_postdata(); ?>

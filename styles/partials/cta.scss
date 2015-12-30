@@ -1,0 +1,50 @@
+.al-cta {
+  padding: 20px 200px;
+  border-top: 1px dashed $color--attention;
+  border-bottom: 1px dashed $color--attention;
+  font-size: 20px;
+  overflow: hidden;
+
+  @media(max-width: $media-desktop) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.al-cta__content {
+  display: inline-block;
+  width: 60%;
+  font-family: $font--fancy;
+  vertical-align: middle;
+  margin-right: -4px;
+
+  @media(max-width: $media-mobile) {
+    width: 100%;
+  }
+
+}
+
+.al-cta__btn {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+  vertical-align: middle;
+  margin-right: -4px;
+
+  @media(max-width: $media-mobile) {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  a {
+    text-align: center;
+    @media(max-width: $media-tablet) {
+      padding: 10px 30px;
+      font-size: 18px;
+    }
+
+    @media(max-width: $media-mobile) {
+      display: block;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 .al-main-header {
   background: rgba(0,0,0,0.8);
+  position: relative;
 
   .home & {
     background: rgba(255,255,255,.2);
@@ -25,21 +26,59 @@
   &:hover {
     color: $color-brand;
   }
+
+  @media(max-width: $media-desktop) {
+    margin-right: 10px;
+  }
+
+  @media(max-width: $media-tablet) {
+    float: none;
+    display: inline-block;
+    margin-left: 50px;
+
+  }
 }
 
 .menu-main-nav-container {
   margin-right: 200px;
   margin-left: 50px;
+
+  @media(max-width: $media-desktop) {
+    margin-right: 150px;
+  }
 }
 
 .al-main-nav {
   padding: 0;
   margin: 0;
-
   height: 50px;
+
+  @media(max-width: $media-tablet) {
+      height: auto;
+      margin-right: 0;
+      margin-left: 0;
+      width: 100%;
+      background: #000;
+      position: absolute;
+      top: 50px;
+      left: 0;
+    display: none;
+  }
+
+  @media(min-width: $media-tablet + 1) {
+    display: block !important;
+  }
+
   li {
     display: inline-block;
     height: 100%;
+    margin-right: 15px;
+
+    @media(max-width: $media-tablet) {
+      display: block;
+      height: auto;
+      margin-right: 0;
+    }
   }
 
   a {
@@ -55,12 +94,24 @@
     &:hover {
       color: darken(#fff, 30%)
     }
+
+    @media(max-width: $media-desktop) {
+      font-size: 14px;
+    }
+
+    @media(max-width: $media-tablet) {
+      display: block;
+      height: auto;
+      font-size: 14px;
+    }
+
   }
 }
 
 .al-social {
   float: right;
   margin: 10px 0;
+  padding: 0;
 }
 
 .al-social-item {
@@ -72,7 +123,7 @@
     height: 30px;
     border: 1px solid #fff;
     border-radius: 50%;
-    padding-top: 5px;
+    padding-top: 6px;
     font-size: 16px;
     color: #fff;
     display: inline-block;
@@ -90,10 +141,33 @@
         border-color: #287bbc;
       }
 
+      &.fa-flickr {
+        background: #ff0084;
+        border-color: #ff0084;
+      }
+
       &.fa-envelope {
         background: $color-brand;
         border-color: $color-brand;
       }
     }
   }
+}
+
+.al-mobile-nav-trigger {
+  font-size: 30px;
+  color: #fff;
+  display: none;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  padding: 0 10px;
+
+  @media(max-width: $media-tablet) {
+    display: inline-block;
+  }
+}
+
+.al-mobile-nav-trigger--active {
+  background: #000;
 }

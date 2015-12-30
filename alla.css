@@ -1,0 +1,1195 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Oleo+Script:700|Oswald:400,700);
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  background: url(../alla/images/body-bg.jpg) repeat 0 0;
+  min-width: 300px; }
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+p {
+  margin: 10px 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3; }
+
+.cf:before, .al-media:before,
+.cf:after,
+.al-media:after {
+  content: " ";
+  display: table; }
+
+.cf:after, .al-media:after {
+  clear: both; }
+
+button {
+  background: none;
+  padding: 0;
+  border: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none; }
+
+h1, h2, h3 {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  color: rgba(0, 0, 0, 0.8); }
+
+a {
+  color: #2b8ecd;
+  text-decoration: none;
+  transition: all 0.3s ease; }
+  a:hover {
+    color: #2271a3; }
+
+cite {
+  font-style: normal; }
+
+.al-site-wrap {
+  position: relative; }
+
+.al-container {
+  width: 1200px;
+  margin: 0 auto; }
+  @media (max-width: 1200px) {
+    .al-container {
+      width: 100%;
+      padding: 0 20px; } }
+  @media (max-width: 700px) {
+    .al-container {
+      padding: 0 10px; } }
+
+.al-section {
+  margin-top: 30px; }
+
+.al-content {
+  padding-top: 40px; }
+
+.justify {
+  text-align: justify; }
+  .justify:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0; }
+
+.al-relative {
+  position: relative; }
+
+.al-margin--xxl {
+  margin-top: 70px; }
+
+.al-margin--xl {
+  margin-top: 50px; }
+
+.al-margin--l {
+  margin-top: 40px; }
+
+.al-margin--m {
+  margin-top: 30px; }
+
+.al-margin--s {
+  margin-top: 20px; }
+
+.al-margin--xs {
+  margin-top: 10px; }
+
+.al-media__heading {
+  width: 65%;
+  float: left; }
+
+.al-media__info {
+  width: 35%;
+  float: right;
+  text-align: right; }
+
+.al-view-link, .al-post__description .more-link, a.al-view-link, .al-post__description a.more-link {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 6px 8px;
+  vertical-align: middle;
+  line-height: 1;
+  font-family: "Oswald", sans-serif; }
+
+.al-view-link--brand {
+  background: #f56308; }
+
+.al-view-link--attention {
+  background: #2b8ecd; }
+
+.al-btn {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: inline-block; }
+
+a.al-btn:hover {
+  color: #fff; }
+
+.al-btn--primary {
+  padding: 10px 30px;
+  font-size: 20px; }
+  @media (max-width: 850px) {
+    .al-btn--primary {
+      font-size: 16px;
+      padding: 5px 20px; } }
+  @media (max-width: 700px) {
+    .al-btn--primary {
+      font-size: 14px;
+      padding: 5px 10px; } }
+
+.al-btn--regular, a.al-btn--regular {
+  border: 1px solid #000;
+  color: #000; }
+  .al-btn--regular:hover, a.al-btn--regular:hover {
+    color: #f56308;
+    border-color: #f56308; }
+
+.al-btn--secondary {
+  padding: 8px 20px;
+  font-size: 18px; }
+
+.al-btn--attention {
+  background: #2b8ecd; }
+  .al-btn--attention:hover {
+    background: #277fb8; }
+  .al-btn--attention:active {
+    background: #2271a3; }
+
+.al-btn--brand, .al-post__description .more-link {
+  background: #f56308; }
+  .al-btn--brand:hover, .al-post__description .more-link:hover {
+    background: #dc5907; }
+  .al-btn--brand:active, .al-post__description .more-link:active {
+    background: #c44f06; }
+
+.al-main-header {
+  background: rgba(0, 0, 0, 0.8);
+  position: relative; }
+  .home .al-main-header {
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000; }
+
+.al-brand-link {
+  float: left;
+  width: 50px;
+  font-family: "Oleo Script", cursive;
+  font-size: 40px;
+  padding: 5px 0 0;
+  line-height: 1;
+  margin-right: 50px;
+  color: #fff;
+  transition: color 1s ease; }
+  .al-brand-link:hover {
+    color: #f56308; }
+  @media (max-width: 1200px) {
+    .al-brand-link {
+      margin-right: 10px; } }
+  @media (max-width: 850px) {
+    .al-brand-link {
+      float: none;
+      display: inline-block;
+      margin-left: 50px; } }
+
+.menu-main-nav-container {
+  margin-right: 200px;
+  margin-left: 50px; }
+  @media (max-width: 1200px) {
+    .menu-main-nav-container {
+      margin-right: 150px; } }
+
+.al-main-nav {
+  padding: 0;
+  margin: 0;
+  height: 50px; }
+  @media (max-width: 850px) {
+    .al-main-nav {
+      height: auto;
+      margin-right: 0;
+      margin-left: 0;
+      width: 100%;
+      background: #000;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      display: none; } }
+  @media (min-width: 851px) {
+    .al-main-nav {
+      display: block !important; } }
+  .al-main-nav li {
+    display: inline-block;
+    height: 100%;
+    margin-right: 15px; }
+    @media (max-width: 850px) {
+      .al-main-nav li {
+        display: block;
+        height: auto;
+        margin-right: 0; } }
+  .al-main-nav a {
+    height: 100%;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    padding: 15px 10px 0;
+    text-decoration: none;
+    transition: all 0.3s ease; }
+    .al-main-nav a:hover {
+      color: #b3b3b3; }
+    @media (max-width: 1200px) {
+      .al-main-nav a {
+        font-size: 14px; } }
+    @media (max-width: 850px) {
+      .al-main-nav a {
+        display: block;
+        height: auto;
+        font-size: 14px; } }
+
+.al-social {
+  float: right;
+  margin: 10px 0;
+  padding: 0; }
+
+.al-social-item {
+  display: inline-block;
+  margin-left: 5px; }
+  .al-social-item a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding-top: 6px;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    text-align: center; }
+    .al-social-item a:hover.fa-facebook {
+      background: #3b5998;
+      border-color: #3b5998; }
+    .al-social-item a:hover.fa-linkedin {
+      background: #287bbc;
+      border-color: #287bbc; }
+    .al-social-item a:hover.fa-flickr {
+      background: #ff0084;
+      border-color: #ff0084; }
+    .al-social-item a:hover.fa-envelope {
+      background: #f56308;
+      border-color: #f56308; }
+
+.al-mobile-nav-trigger {
+  font-size: 30px;
+  color: #fff;
+  display: none;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  padding: 0 10px; }
+  @media (max-width: 850px) {
+    .al-mobile-nav-trigger {
+      display: inline-block; } }
+
+.al-mobile-nav-trigger--active {
+  background: #000; }
+
+.al-promo {
+  position: relative; }
+  .al-promo:hover .al-promo__nav-item {
+    opacity: .2; }
+  @media (max-width: 850px) {
+    .al-promo {
+      height: 350px; } }
+
+.al-promo .al-promo__nav-item {
+  background-image: url(../alla/images/arrow-spr.png);
+  width: 110px;
+  height: 220px;
+  top: 50%;
+  margin-top: -110px;
+  position: absolute;
+  z-index: 300;
+  opacity: 0;
+  transition: all 1s ease;
+  cursor: pointer; }
+  .al-promo .al-promo__nav-item:hover {
+    opacity: 1; }
+  @media (max-width: 1200px) {
+    .al-promo .al-promo__nav-item {
+      display: none !important; } }
+
+.al-promo__nav-item--prev {
+  background-position: 0 0;
+  left: 50px; }
+
+.al-promo__nav-item--next {
+  background-position: -120px 0;
+  right: 50px; }
+
+.al-promo__brand {
+  position: absolute;
+  top: 65px;
+  width: 200px;
+  height: 360px;
+  background: url(../alla/images/userpic.png) no-repeat 0 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: 10;
+  left: 50px; }
+  @media (max-width: 850px) {
+    .al-promo__brand {
+      font-size: 20px;
+      width: 150px;
+      height: 270px;
+      left: 20px; } }
+
+.al-promo-slide {
+  min-height: 440px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  padding-top: 70px; }
+  @media (max-width: 850px) {
+    .al-promo-slide {
+      min-height: 330px; } }
+  .al-promo-slide:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); }
+  .al-promo-slide:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../alla/images/bg_pattern.png) repeat 0 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px; }
+
+.al-promo-slide__content {
+  float: right;
+  margin-top: 30px;
+  width: 65%;
+  padding: 30px;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  z-index: 10; }
+  @media (max-width: 850px) {
+    .al-promo-slide__content {
+      margin-top: 5px;
+      width: 75%; } }
+  @media (max-width: 700px) {
+    .al-promo-slide__content {
+      margin-left: 160px;
+      padding: 0;
+      width: auto; } }
+
+.al-promo-slide__title {
+  font-size: 34px;
+  font-family: 'Oswald', sans-serif; }
+  @media (max-width: 850px) {
+    .al-promo-slide__title {
+      font-size: 24px; } }
+  @media (max-width: 450px) {
+    .al-promo-slide__title {
+      font-size: 20px; } }
+
+.al-promo-slide__description {
+  font-size: 24px;
+  margin-top: 20px; }
+  @media (max-width: 850px) {
+    .al-promo-slide__description {
+      font-size: 18px;
+      margin-top: 10px; } }
+  @media (max-width: 700px) {
+    .al-promo-slide__description {
+      font-size: 16px; } }
+  @media (max-width: 450px) {
+    .al-promo-slide__description {
+      font-size: 14px; } }
+
+.al-promo-slide__cta {
+  margin-top: 25px;
+  display: inline-block;
+  background: 0;
+  border: 3px solid #2b8ecd;
+  color: #2b8ecd; }
+  .al-promo-slide__cta:hover {
+    color: #fff; }
+  @media (max-width: 850px) {
+    .al-promo-slide__cta {
+      margin-top: 10px; } }
+
+.al-promo__pagination {
+  text-align: center;
+  margin: 10px 0 0;
+  padding: 0; }
+  @media (min-width: 1200px) {
+    .al-promo__pagination {
+      display: none !important; } }
+
+.al-promo__pagination-item {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid #2b8ecd; }
+  .al-promo__pagination-item.selected {
+    background: #f56308;
+    border-color: #f56308; }
+
+.al-grid {
+  margin-left: -20px;
+  -webkit-flex-flow: row wrap;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap; }
+
+.al-grid__item {
+  padding-left: 20px;
+  padding-bottom: 20px; }
+  @media (max-width: 850px) {
+    .al-grid__item {
+      width: 100%; } }
+
+.al-grid__item--third {
+  width: 33.33%; }
+  @media (max-width: 700px) {
+    .al-grid__item--third {
+      width: 100%; } }
+
+.al-grid__item--half {
+  width: 50%; }
+  @media (max-width: 700px) {
+    .al-grid__item--half {
+      width: 100%; } }
+
+.al-grid__item--two-thirds {
+  width: 66.66%; }
+  @media (max-width: 700px) {
+    .al-grid__item--two-thirds {
+      width: 100%; } }
+
+.al-grid__item--1-4 {
+  width: 25%; }
+  @media (max-width: 850px) {
+    .al-grid__item--1-4 {
+      width: 50%; } }
+  @media (max-width: 700px) {
+    .al-grid__item--1-4 {
+      width: 100%; } }
+
+.al-grid__item--3-4 {
+  width: 75%; }
+  @media (max-width: 850px) {
+    .al-grid__item--3-4 {
+      width: 100%; } }
+
+.al-grid__item--equal {
+  vertical-align: top;
+  display: -webkit-box;
+  display: flex; }
+  .al-grid__item--equal > * {
+    width: 100%; }
+
+.al-heading--primary {
+  font-size: 36px; }
+  @media (max-width: 850px) {
+    .al-heading--primary {
+      font-size: 24px; } }
+
+.al-heading-secondary {
+  font-size: 28px; }
+  @media (max-width: 850px) {
+    .al-heading-secondary {
+      font-size: 20px; } }
+
+.al-heading--tertiary {
+  font-size: 22px; }
+  @media (max-width: 850px) {
+    .al-heading--tertiary {
+      font-size: 18px; } }
+
+.al-post__thumbnail img {
+  display: block;
+  border: 1px dashed rgba(0, 0, 0, 0.2); }
+
+.al-post__thumbnail--blog {
+  float: left;
+  width: 45%; }
+  @media (max-width: 850px) {
+    .al-post__thumbnail--blog {
+      float: none;
+      width: 100%; } }
+
+.al-post--blog {
+  margin-bottom: 50px;
+  padding-right: 20px; }
+
+.al-post__content {
+  margin-left: 48%;
+  margin-top: -7px; }
+  @media (max-width: 850px) {
+    .al-post__content {
+      margin-left: 0;
+      margin-top: 10px; } }
+
+.al-post__thumbnail--home {
+  margin-bottom: 10px; }
+
+.al-post__description {
+  margin-top: 10px; }
+  .al-post__description .more-link {
+    display: block; }
+
+.al-post__meta {
+  font-size: 14px;
+  margin-top: 5px; }
+  .al-post__meta a {
+    color: grey; }
+    .al-post__meta a:hover {
+      text-decoration: underline; }
+  .al-post__meta .fa {
+    color: #f56308;
+    margin-right: 3px; }
+  .al-post__meta .post-categories {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px; }
+  .al-post__meta li {
+    display: inline-block; }
+
+.al-post__meta-item {
+  display: inline-block;
+  margin-right: 20px; }
+
+.al-card {
+  font-size: 16px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  right: 0;
+  bottom: 0; }
+  .al-card:hover {
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    right: 3px;
+    bottom: 3px; }
+
+.al-card__location {
+  margin-top: 5px;
+  font-size: 13px; }
+
+.al-location {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold; }
+  .al-location .fa {
+    margin-right: 5px; }
+
+.al-card__header {
+  margin-bottom: 5px; }
+
+.al-sidebar {
+  padding-left: 30px;
+  border-left: 1px dashed rgba(0, 0, 0, 0.2); }
+  @media (max-width: 850px) {
+    .al-sidebar {
+      padding-left: 0;
+      border-left: 0;
+      border-top: 1px dashed rgba(0, 0, 0, 0.2);
+      padding-top: 30px; } }
+  .al-sidebar ul,
+  .al-sidebar ol {
+    padding: 0;
+    margin: 0; }
+  .al-sidebar li {
+    list-style: none; }
+    .al-sidebar li a {
+      color: #f56308; }
+      .al-sidebar li a:hover {
+        text-decoration: underline; }
+
+.widget {
+  margin-bottom: 50px; }
+  @media (max-width: 850px) {
+    .widget {
+      margin-bottom: 20px; }
+      .widget:last-child {
+        margin-bottom: 0; } }
+
+.widgettitle {
+  margin-bottom: 15px; }
+
+.tagcloud a {
+  color: grey;
+  font-size: 16px !important;
+  display: block; }
+  .tagcloud a:hover {
+    text-decoration: underline; }
+
+.fb-comments iframe {
+  margin-top: 50px; }
+
+.al-pagination {
+  margin-top: 30px;
+  text-align: center; }
+  .al-pagination a {
+    color: #f56308; }
+    .al-pagination a:hover {
+      text-decoration: underline; }
+
+.al-pagination__prev,
+.al-pagination__next {
+  display: inline-block; }
+
+.alignleft {
+  float: left;
+  margin-right: 20px; }
+
+.alignright {
+  float: right;
+  margin-left: 20px; }
+
+.al-main-footer {
+  color: #fff;
+  padding: 20px 0;
+  background: black;
+  font-size: 16px; }
+
+.al-footer-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .al-footer-nav a {
+    color: #fff;
+    font-size: 14px; }
+    .al-footer-nav a:hover {
+      color: #2b8ecd; }
+
+.al-main-footer__social {
+  text-align: right;
+  float: none; }
+  @media (max-width: 850px) {
+    .al-main-footer__social {
+      text-align: left; } }
+
+.al-404__imagery {
+  background: url(../alla/images/404.jpg) no-repeat 0 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 600px; }
+  @media (max-width: 850px) {
+    .al-404__imagery {
+      height: 300px; } }
+  @media (max-width: 700px) {
+    .al-404__imagery {
+      height: 200px; } }
+
+.al-numbers {
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  padding: 50px 0;
+  background-image: url(../alla/images/testimonials.jpg);
+  font-size: 20px; }
+  .al-numbers:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 3; }
+  .al-numbers:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../alla/images/bg_pattern.png) repeat 0 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5; }
+
+.al-number {
+  color: #fff;
+  z-index: 100;
+  position: relative;
+  text-align: center; }
+  @media (max-width: 700px) {
+    .al-number {
+      margin-bottom: 10px; } }
+
+.al-number__number {
+  width: 130px;
+  height: 130px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  padding-top: 15px;
+  font-size: 60px;
+  font-family: "Oswald", sans-serif;
+  display: inline-block;
+  margin-bottom: 10px; }
+  @media (max-width: 850px) {
+    .al-number__number {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      padding-top: 10px;
+      font-size: 35px;
+      border-width: 3px; } }
+
+.al-number__copy {
+  font-size: 26px; }
+  @media (max-width: 850px) {
+    .al-number__copy {
+      font-size: 20px; } }
+  @media (max-width: 850px) {
+    .al-number__copy {
+      display: inline-block; } }
+
+.al-number__action {
+  font-size: 30px;
+  text-transform: uppercase; }
+  @media (max-width: 850px) {
+    .al-number__action {
+      font-size: 22px; } }
+  @media (max-width: 850px) {
+    .al-number__action {
+      display: inline-block;
+      text-transform: none; } }
+
+.al-cta {
+  padding: 20px 200px;
+  border-top: 1px dashed #2b8ecd;
+  border-bottom: 1px dashed #2b8ecd;
+  font-size: 20px;
+  overflow: hidden; }
+  @media (max-width: 1200px) {
+    .al-cta {
+      padding-right: 0;
+      padding-left: 0; } }
+
+.al-cta__content {
+  display: inline-block;
+  width: 60%;
+  font-family: "Oswald", sans-serif;
+  vertical-align: middle;
+  margin-right: -4px; }
+  @media (max-width: 700px) {
+    .al-cta__content {
+      width: 100%; } }
+
+.al-cta__btn {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+  vertical-align: middle;
+  margin-right: -4px; }
+  @media (max-width: 700px) {
+    .al-cta__btn {
+      width: 100%;
+      margin-top: 10px; } }
+  .al-cta__btn a {
+    text-align: center; }
+    @media (max-width: 850px) {
+      .al-cta__btn a {
+        padding: 10px 30px;
+        font-size: 18px; } }
+    @media (max-width: 700px) {
+      .al-cta__btn a {
+        display: block; } }

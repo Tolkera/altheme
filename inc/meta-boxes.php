@@ -58,9 +58,6 @@ function custom_meta_boxes() {
 		)
 	);
 
-
-
-
 	$prefix = 'candidate_';
 	$meta_boxes[] = array(
 		'id'          => $prefix . 'meta-box',
@@ -73,6 +70,28 @@ function custom_meta_boxes() {
 			array(
 				'label'       => 'Position',
 				'id'          => 'candidate_position',
+				'type'        => 'text'
+			),
+			array(
+				'label'       => 'Location',
+				'id'          => 'candidate_location',
+				'type'        => 'text'
+			)
+		)
+	);
+
+	$prefix = 'vacancy_';
+	$meta_boxes[] = array(
+		'id'          => $prefix . 'meta-box',
+		'title'       => 'Extra fields',
+		'desc'        => '',
+		'pages'       => array( 'vacancies' ),
+		'context'     => 'normal',
+		'priority'    => 'high',
+		'fields'      => array(
+			array(
+				'label'       => 'Location',
+				'id'          => 'vacancy_location',
 				'type'        => 'text'
 			)
 		)

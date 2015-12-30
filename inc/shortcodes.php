@@ -3,7 +3,7 @@
  * List of all available shortcodes
  *
  * @package WordPress
- * @subpackage tolkera
+ * @subpackage alla
  */
 
 /**

@@ -1,0 +1,27 @@
+.al-pagination {
+  margin-top: 30px;
+  text-align: center;
+
+  a {
+    color: $color-brand;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.al-pagination__prev,
+.al-pagination__next{
+  display: inline-block;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 20px;
+}
+
+.alignright {
+  float: right;
+  margin-left: 20px;
+}

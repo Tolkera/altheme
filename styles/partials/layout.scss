@@ -5,14 +5,21 @@
 .al-container {
   width: 1200px;
   margin: 0 auto;
+
+  @media(max-width: $media-desktop){
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  @media(max-width: $media-mobile){
+    padding: 0 10px;
+  }
 }
 
 .al-section {
   margin-top: 30px;
 }
 
-
-.al-main-footer {
-  padding: 100px;
-  background: rgba(0,0,0, 1);
+.al-content {
+  padding-top: 40px;
 }

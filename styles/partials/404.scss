@@ -1,0 +1,14 @@
+.al-404__imagery {
+  background: url(#{$img-path}/404.jpg) no-repeat 0 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 600px;
+
+  @media(max-width: $media-tablet) {
+    height: 300px;
+  }
+
+  @media(max-width: $media-mobile) {
+    height: 200px;
+  }
+}

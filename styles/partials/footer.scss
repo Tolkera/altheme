@@ -1,0 +1,30 @@
+.al-main-footer {
+  color: #fff;
+  padding: 20px 0;
+  background: rgba(0,0,0, 1);
+  font-size: 16px;
+}
+
+.al-footer-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      color: #fff;
+      font-size: 14px;
+
+      &:hover {
+        color: $color--attention;
+      }
+    }
+}
+
+.al-main-footer__social {
+  text-align: right;
+  float: none;
+  
+  @media(max-width: $media-tablet) {
+    text-align: left;
+  }
+}

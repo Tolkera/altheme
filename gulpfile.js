@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 gulp.task('sass:main', function () {
-  return gulp.src('./styles/tolkera.scss')
+  return gulp.src('./styles/alla.scss')
       .pipe(sass({}).on('error', sass.logError))
       .pipe(gulp.dest('./'));
 });
