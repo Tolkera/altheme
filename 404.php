@@ -12,3 +12,18 @@
     </main>
 
 <?php get_footer(); ?>
+
+
+<body ng-app="testApp" ng-controller="testCtrl">
+
+
+{{test}}
+
+<a href="" ui-sref="/">Stats</a>
+
+
+<a href="" ui-sref="stats">Stats</a>
+
+<div ui-view>
+
+</div>

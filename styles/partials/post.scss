@@ -78,3 +78,57 @@
   display: inline-block;
   margin-right: 20px;
 }
+
+
+.al-post__date {
+  color: grey;
+  font-size: 14px;
+  margin-top: 5px;
+
+  .fa {
+    margin-right: 5px;
+    color: $color-brand;
+  }
+}
+
+.al-post__heading {
+  float: left;
+  width: 60%;
+
+  @media(max-width: $media-mobile) {
+    float: none;
+    width: 100%;
+  }
+}
+
+.al-post__blog-link {
+  margin-top: 10px;
+  float: right;
+  border-bottom: 1px solid grey;
+  font-size: 13px;
+  transition: $transition--quick;
+
+  &:hover {
+    border-bottom-color: transparent;
+
+  }
+  @media(max-width: $media-mobile) {
+    float: none;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+}
+
+.al-post__lang-trigger {
+  border-bottom-style: dotted;
+  cursor: pointer;
+
+  .fa {
+    margin-right: 5px;
+  }
+}
+
+.al-post__lang-text {
+ color: lighten(#333, 30%)
+}

@@ -20,6 +20,24 @@ function custom_meta_boxes() {
 	 */
     $meta_boxes = array();
 
+
+	$prefix = '_rus-translation'; // Prefix for all fields
+
+	$meta_boxes[] = array(
+		'id' => $prefix . 'meta-box',
+		'title' => 'Russian description',
+		'pages' => array('post'), // post type
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'label'       => 'Description',
+				'id'          => 'rus_description',
+				'type'        => 'textarea'
+			),
+		),
+	);
+
 	$prefix = 'slide_';
 	$meta_boxes[] = array(
 		'id'          => $prefix . 'meta-box',
@@ -76,7 +94,18 @@ function custom_meta_boxes() {
 				'label'       => 'Location',
 				'id'          => 'candidate_location',
 				'type'        => 'text'
-			)
+			),
+			array(
+				'label'       => 'Status',
+				'id'          => 'candidate_status',
+				'type'        => 'text',
+				'desc'		=> 'E.g. ready for relocation'
+			),
+			array(
+				'label'       => 'Status color',
+				'id'          => 'candidate_status_color',
+				'type'        => 'colorpicker',
+			),
 		)
 	);
 
@@ -93,7 +122,18 @@ function custom_meta_boxes() {
 				'label'       => 'Location',
 				'id'          => 'vacancy_location',
 				'type'        => 'text'
-			)
+			),
+			array(
+				'label'       => 'Status',
+				'id'          => 'vacancy_status',
+				'type'        => 'text',
+				'desc'		=> 'E.g. your last chance'
+			),
+			array(
+				'label'       => 'Status color',
+				'id'          => 'vacancy_status_color',
+				'type'        => 'colorpicker'
+			),
 		)
 	);
 

@@ -3,6 +3,21 @@
   padding: 20px 0;
   background: rgba(0,0,0, 1);
   font-size: 16px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .al-social {
+    text-align: right;
+    float: none;
+
+    @media(max-width: $media-tablet) {
+      text-align: left;
+    }
+  }
 }
 
 .al-footer-nav {
@@ -18,13 +33,4 @@
         color: $color--attention;
       }
     }
-}
-
-.al-main-footer__social {
-  text-align: right;
-  float: none;
-  
-  @media(max-width: $media-tablet) {
-    text-align: left;
-  }
 }

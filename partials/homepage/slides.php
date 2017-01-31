@@ -1,15 +1,11 @@
+
+
 <?php
 
-$args = array(
-    'post_type' => 'slides',
-    'posts_per_page' => 10,
-    'orderby' => 'date',
-    'order' => 'ASC'
-);
+$homepage_slides = get_theme_option('homepage-slides');
+?>
 
-$the_query = new WP_Query( $args );
-
-if( $the_query->have_posts() ) : ?>
+<?php  if (!empty($homepage_slides)) : ?>
 
 
     <div class="al-promo">
@@ -21,29 +17,30 @@ if( $the_query->have_posts() ) : ?>
         </div>
 
         <div class="js-main-slider cf">
-            <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <?php  foreach($homepage_slides as $slide): ?>
+
                 <?php
-                $slide_bg = get_the_post_meta('slide_bg');
-                $slide_title =  get_the_post_meta('slide_title');
-                $slide_description =  get_the_post_meta('slide_description');
-                $slide_cta_text =  get_the_post_meta('slide_cta_text');
-                $slide_cta_link =  get_the_post_meta('slide_cta_link');
+                $slide_bg = $slide["homepage-slide-image"];
+                $slide_title =  $slide["title"];
+                $slide_description =  $slide["homepage-slide-text"];
+                $slide_cta_text = $slide["homepage-slide-button-text"];
+                $slide_cta_link =  $slide["homepage-slide-button-link"];
                 ?>
 
-                <div class="al-promo-slide" style="background-image: url(<?php echo $slide_bg; ?>)">
+              <div class="al-promo-slide" style="background-image: url(<?php echo $slide_bg; ?>)">
                     <div class="al-container al-relative cf">
 
-                        <div class="al-promo-slide__content">
+                       <div class="al-promo-slide__content">
                             <div class="al-promo-slide__title"><?php echo $slide_title; ?></div>
                             <div class="al-promo-slide__description"><?php echo $slide_description; ?></div>
                             <a class="al-promo-slide__cta al-btn al-btn--primary al-btn--attention" href="<?php echo $slide_cta_link; ?>"><?php echo $slide_cta_text; ?></a>
                         </div>
                     </div>
                 </div>
-            <?php endwhile; ?>
+            <?php endforeach;; ?>
         </div>
         <ol class="al-promo__pagination">
 
         </ol>
     </div>
-<?php endif; wp_reset_postdata(); ?>
+    <?php  endif; ?>

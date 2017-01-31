@@ -62,6 +62,41 @@ function _custom_theme_options() {
             ),
         ),
         'settings'        => array(
+            array(
+                'label'       => 'Home Slides',
+                'id'          => 'homepage-slides-tab',
+                'type'        => 'tab',
+                'section'     => 'homepage'
+            ),
+
+            array(
+                'label'       => 'Home Slides',
+                'id'          => 'homepage-slides',
+                'type'        => 'list-item',
+                'section'     => 'homepage',
+                'settings'    => array(
+                    array(
+                        'label'       => 'Slide Image',
+                        'id'          => 'homepage-slide-image',
+                        'type'        => 'upload',
+                    ),
+                    array(
+                        'label'       => 'Slide Text',
+                        'id'          => 'homepage-slide-text',
+                        'type'        => 'text',
+                    ),
+                    array(
+                        'label'       => 'Slide Button Text',
+                        'id'          => 'homepage-slide-button-text',
+                        'type'        => 'text',
+                    ),
+                    array(
+                        'label'       => 'Slide Button Link',
+                        'id'          => 'homepage-slide-button-link',
+                        'type'        => 'text',
+                    ),
+                )
+            ),
 
 
             array(
@@ -97,6 +132,7 @@ function _custom_theme_options() {
                     ),
                 )
             ),
+
             array(
                 'label'       => 'Home vacancies',
                 'id'          => 'homepage-vacancies',
@@ -125,6 +161,50 @@ function _custom_theme_options() {
                 'section'     => 'homepage'
             ),
 
+            array(
+                'label'       => 'Home Achievements',
+                'id'          => 'homepage-achievements-list',
+                'type'        => 'list-item',
+                'section'     => 'homepage',
+                'settings'    => array(
+                    array(
+                        'label'       => 'Number',
+                        'id'          => 'achievement-number',
+                        'type'        => 'text',
+                    ),
+                    array(
+                        'label'       => 'Action word',
+                        'id'          => 'achievement-action',
+                        'type'        => 'text',
+                    ),
+                )
+            ),
+
+            array(
+                'label'       => 'Home Testimonials',
+                'id'          => 'home-testimonials-tab',
+                'type'        => 'tab',
+                'section'     => 'homepage'
+            ),
+
+            array(
+                'label'       => 'Home Testimonials',
+                'id'          => 'homepage-testimonials-list',
+                'type'        => 'list-item',
+                'section'     => 'homepage',
+                'settings'    => array(
+                    array(
+                        'label'       => 'Text',
+                        'id'          => 'testimonial-text',
+                        'type'        => 'textarea',
+                    ),
+                    array(
+                        'label'       => 'Author\'s company',
+                        'id'          => 'testimonial-company',
+                        'type'        => 'text',
+                    ),
+                )
+            ),
 
 
             array(
@@ -148,8 +228,14 @@ function _custom_theme_options() {
                 'section'     => 'misc'
             ),
             array(
-                'label'       => 'Flickr link',
-                'id'          => 'flickr-url',
+                'label'       => 'Twitter link',
+                'id'          => 'twitter-url',
+                'type'        => 'text',
+                'section'     => 'misc'
+            ),
+            array(
+                'label'       => 'Google+ link',
+                'id'          => 'google-plus-url',
                 'type'        => 'text',
                 'section'     => 'misc'
             ),
@@ -157,6 +243,32 @@ function _custom_theme_options() {
             array(
                 'label'       => 'Email',
                 'id'          => 'email',
+                'type'        => 'text',
+                'section'     => 'misc'
+            ),
+
+            array(
+                'label'       => 'CTA section',
+                'id'          => 'cta-section-tab',
+                'type'        => 'tab',
+                'section'     => 'misc'
+            ),
+            array(
+                'label'       => 'CTA section text',
+                'id'          => 'cta-section-text',
+                'type'        => 'textarea',
+                'section'     => 'misc'
+            ),
+            array(
+                'label'       => 'CTA section button text',
+                'id'          => 'cta-section-btn-text',
+                'type'        => 'text',
+                'section'     => 'misc'
+            ),
+
+            array(
+                'label'       => 'CTA section button link',
+                'id'          => 'cta-section-btn-link',
                 'type'        => 'text',
                 'section'     => 'misc'
             ),

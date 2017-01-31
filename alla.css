@@ -415,15 +415,19 @@ a {
     color: #2271a3; }
 
 cite {
-  font-style: normal; }
+  font-style: normal;
+  display: block; }
+
+blockquote {
+  margin: 0; }
 
 .al-site-wrap {
   position: relative; }
 
 .al-container {
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     .al-container {
       width: 100%;
       padding: 0 20px; } }
@@ -566,7 +570,7 @@ a.al-btn:hover {
   transition: color 1s ease; }
   .al-brand-link:hover {
     color: #f56308; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     .al-brand-link {
       margin-right: 10px; } }
   @media (max-width: 850px) {
@@ -578,7 +582,7 @@ a.al-btn:hover {
 .menu-main-nav-container {
   margin-right: 200px;
   margin-left: 50px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     .menu-main-nav-container {
       margin-right: 150px; } }
 
@@ -586,6 +590,8 @@ a.al-btn:hover {
   padding: 0;
   margin: 0;
   height: 50px; }
+  .al-main-nav ul {
+    margin: 0; }
   @media (max-width: 850px) {
     .al-main-nav {
       height: auto;
@@ -620,7 +626,7 @@ a.al-btn:hover {
     transition: all 0.3s ease; }
     .al-main-nav a:hover {
       color: #b3b3b3; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1100px) {
       .al-main-nav a {
         font-size: 14px; } }
     @media (max-width: 850px) {
@@ -633,6 +639,10 @@ a.al-btn:hover {
   float: right;
   margin: 10px 0;
   padding: 0; }
+  @media (max-width: 700px) {
+    .al-social {
+      float: none;
+      margin-top: 10px; } }
 
 .al-social-item {
   display: inline-block;
@@ -656,6 +666,12 @@ a.al-btn:hover {
     .al-social-item a:hover.fa-flickr {
       background: #ff0084;
       border-color: #ff0084; }
+    .al-social-item a:hover.fa-twitter {
+      background: #55acee;
+      border-color: #55acee; }
+    .al-social-item a:hover.fa-google-plus {
+      background: #dd4b39;
+      border-color: #dd4b39; }
     .al-social-item a:hover.fa-envelope {
       background: #f56308;
       border-color: #f56308; }
@@ -666,7 +682,7 @@ a.al-btn:hover {
   display: none;
   position: absolute;
   left: 0;
-  height: 100%;
+  height: 50px;
   padding: 0 10px; }
   @media (max-width: 850px) {
     .al-mobile-nav-trigger {
@@ -674,6 +690,9 @@ a.al-btn:hover {
 
 .al-mobile-nav-trigger--active {
   background: #000; }
+
+.current-menu-item a {
+  color: #f56308; }
 
 .al-promo {
   position: relative; }
@@ -696,7 +715,7 @@ a.al-btn:hover {
   cursor: pointer; }
   .al-promo .al-promo__nav-item:hover {
     opacity: 1; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     .al-promo .al-promo__nav-item {
       display: none !important; } }
 
@@ -711,29 +730,35 @@ a.al-btn:hover {
 .al-promo__brand {
   position: absolute;
   top: 65px;
-  width: 200px;
+  width: 260px;
   height: 360px;
   background: url(../alla/images/userpic.png) no-repeat 0 0;
   -webkit-background-size: cover;
   background-size: cover;
   z-index: 10;
   left: 50px; }
+  @media (max-width: 1400px) {
+    .al-promo__brand {
+      left: 90px; } }
   @media (max-width: 850px) {
     .al-promo__brand {
       font-size: 20px;
-      width: 150px;
-      height: 270px;
-      left: 20px; } }
+      width: 158px;
+      height: 220px;
+      left: 20px;
+      top: 100px; } }
 
 .al-promo-slide {
   min-height: 440px;
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
-  padding-top: 70px; }
+  padding-top: 70px;
+  background-position: 50% 50%; }
   @media (max-width: 850px) {
     .al-promo-slide {
-      min-height: 330px; } }
+      min-height: 330px;
+      padding-top: 100px; } }
   .al-promo-slide:before {
     position: absolute;
     top: 0;
@@ -741,7 +766,7 @@ a.al-btn:hover {
     content: '';
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85); }
+    background: rgba(0, 0, 0, 0.75); }
   .al-promo-slide:after {
     content: '';
     position: absolute;
@@ -751,6 +776,9 @@ a.al-btn:hover {
     width: 100%;
     height: 100%;
     margin-top: 50px; }
+    @media (max-width: 850px) {
+      .al-promo-slide:after {
+        margin-top: 95px; } }
 
 .al-promo-slide__content {
   float: right;
@@ -811,7 +839,7 @@ a.al-btn:hover {
   text-align: center;
   margin: 10px 0 0;
   padding: 0; }
-  @media (min-width: 1200px) {
+  @media (min-width: 1100px) {
     .al-promo__pagination {
       display: none !important; } }
 
@@ -829,6 +857,7 @@ a.al-btn:hover {
 .al-grid {
   margin-left: -20px;
   -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
   display: -webkit-flex;
   display: flex;
   flex-flow: row wrap; }
@@ -953,6 +982,46 @@ a.al-btn:hover {
   display: inline-block;
   margin-right: 20px; }
 
+.al-post__date {
+  color: grey;
+  font-size: 14px;
+  margin-top: 5px; }
+  .al-post__date .fa {
+    margin-right: 5px;
+    color: #f56308; }
+
+.al-post__heading {
+  float: left;
+  width: 60%; }
+  @media (max-width: 700px) {
+    .al-post__heading {
+      float: none;
+      width: 100%; } }
+
+.al-post__blog-link {
+  margin-top: 10px;
+  float: right;
+  border-bottom: 1px solid grey;
+  font-size: 13px;
+  transition: 0.3s ease; }
+  .al-post__blog-link:hover {
+    border-bottom-color: transparent; }
+  @media (max-width: 700px) {
+    .al-post__blog-link {
+      float: none;
+      margin-top: 0;
+      margin-bottom: 20px;
+      display: inline-block; } }
+
+.al-post__lang-trigger {
+  border-bottom-style: dotted;
+  cursor: pointer; }
+  .al-post__lang-trigger .fa {
+    margin-right: 5px; }
+
+.al-post__lang-text {
+  color: gray; }
+
 .al-card {
   font-size: 16px;
   padding: 20px;
@@ -974,6 +1043,7 @@ a.al-btn:hover {
   font-size: 13px; }
 
 .al-location {
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
   font-weight: bold; }
   .al-location .fa {
@@ -1048,6 +1118,16 @@ a.al-btn:hover {
   padding: 20px 0;
   background: black;
   font-size: 16px; }
+  .al-main-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .al-main-footer .al-social {
+    text-align: right;
+    float: none; }
+    @media (max-width: 850px) {
+      .al-main-footer .al-social {
+        text-align: left; } }
 
 .al-footer-nav {
   margin: 0;
@@ -1058,13 +1138,6 @@ a.al-btn:hover {
     font-size: 14px; }
     .al-footer-nav a:hover {
       color: #2b8ecd; }
-
-.al-main-footer__social {
-  text-align: right;
-  float: none; }
-  @media (max-width: 850px) {
-    .al-main-footer__social {
-      text-align: left; } }
 
 .al-404__imagery {
   background: url(../alla/images/404.jpg) no-repeat 0 0;
@@ -1159,7 +1232,7 @@ a.al-btn:hover {
   border-bottom: 1px dashed #2b8ecd;
   font-size: 20px;
   overflow: hidden; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     .al-cta {
       padding-right: 0;
       padding-left: 0; } }
@@ -1193,3 +1266,48 @@ a.al-btn:hover {
     @media (max-width: 700px) {
       .al-cta__btn a {
         display: block; } }
+
+.al-cta-label {
+  border-radius: 3px;
+  font-size: 11px;
+  color: #fff;
+  padding: 2px 5px;
+  display: inline-block; }
+
+.al-testimonial {
+  padding-left: 45px;
+  font-size: 15px;
+  line-height: 1.5;
+  position: relative; }
+
+.al-testimonial__description {
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.7); }
+  .al-testimonial__description .fa {
+    position: absolute;
+    color: #2b8ecd;
+    font-size: 30px;
+    left: 10px;
+    top: -10px; }
+
+.al-testimonial__cite {
+  display: block; }
+
+.al-testimonial__author {
+  font-size: 16px;
+  color: #f56308; }
+
+.al-testimonial__company {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 13px; }
+
+.ssba-wrap {
+  font-family: "Roboto", sans-serif !important;
+  color: grey;
+  margin-top: 10px;
+  padding: 20px 0;
+  border: 1px solid grey;
+  border-left: 0;
+  border-right: 0;
+  font-size: 14px !important;
+  font-weight: normal; }

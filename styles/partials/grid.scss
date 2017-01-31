@@ -1,11 +1,10 @@
 .al-grid {
   margin-left: -20px;
   -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
   display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
-
-
 }
 
 .al-grid__item {

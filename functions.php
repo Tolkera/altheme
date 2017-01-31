@@ -124,3 +124,17 @@ function register_my_menus() {
 	);
 }
 add_action( 'init', 'register_my_menus' );
+
+
+function alla_wp_title( $title, $sep ) {
+	if( is_singular( 'candidates' ) ) {
+		$position = get_the_post_meta( 'candidate_position' );
+
+		$description = get_bloginfo( 'description', 'display' );
+
+		$title = $position . " " . $sep . " " . $description;
+	}
+
+	return $title;
+}
+add_filter( 'wp_title', 'alla_wp_title', 10, 2 );

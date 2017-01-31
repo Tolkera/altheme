@@ -5,6 +5,9 @@
 
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <base href="/alla/profile/">
 
 <?php if (is_search()) { ?>
 <meta name="robots" content="noindex, nofollow" /> 
@@ -22,7 +25,7 @@
 <?php
 $linkedin_url = get_theme_option('linkedin-url');
 $facebook_url = get_theme_option('facebook-url');
-$flickr_url = get_theme_option('flickr-url');
+$twitter_url = get_theme_option('twitter-url');
 $email = get_theme_option('email');
 
 ?>
@@ -30,20 +33,16 @@ $email = get_theme_option('email');
     <div class="al-site-wrap">
         <header class="al-main-header">
                 <nav class="al-container cf">
+
                     <button class="al-mobile-nav-trigger js-nav-trigger"><span class="fa fa-bars"></span></button>
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="al-brand-link">A</a>
-                    <ul class="al-social">
-                        <li class="al-social-item"><a href="<?php print $linkedin_url ?>" class="fa fa-linkedin"></a></li>
-                        <li class="al-social-item"><a href="<?php print $facebook_url ?>" class="fa fa-facebook"></a></li>
-                        <li class="al-social-item"><a href="<?php print $flickr_url ?>" class="fa fa-flickr"></a></li>
-                        <li class="al-social-item"><a href="mailto:<?php print $email ?>" class="fa fa-envelope"></a></li>
+                    <?php get_theme_part('partials/social-links');  ?>
 
-                    </ul>
 
                     <?php
                     $defaults = array(
                         'container'       => 'div',
-                        'menu_class'      => 'al-main-nav justify js-main-nav',
+                        'menu_class'      => 'al-main-nav js-main-nav',
                         'theme_location'    => 'primary'
                     );
 

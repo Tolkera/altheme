@@ -3,7 +3,7 @@
 }
 
 .al-container {
-  width: 1200px;
+  width: $media-desktop;
   margin: 0 auto;
 
   @media(max-width: $media-desktop){
